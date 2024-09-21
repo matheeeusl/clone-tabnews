@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev" : "next dev"
   },
-  "author": "",
+  "author": "@matheeeusl",
   "license": "MIT",
   "dependencies": {
     "next": "^13.1.6",
