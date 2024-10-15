@@ -6,7 +6,8 @@ export default async function migrations(request, response) {
   const dbClient = await database.getNewClient();
 
   if (request.methood !== "GET" && request.method !== "POST") {
-    console.log('Method not allowed');
+    await dbClient.end();
+    return response.status(405).end();
   }
 
   const defaultMigrationsOptions = {
