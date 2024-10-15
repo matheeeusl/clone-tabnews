@@ -5,6 +5,10 @@ import database from "infra/database.js";
 export default async function migrations(request, response) {
   const dbClient = await database.getNewClient();
 
+  if (request.methood !== "GET" && request.method !== "POST") {
+    console.log('Method not allowed');
+  }
+
   const defaultMigrationsOptions = {
     dbClient,
     dryRun: true,
