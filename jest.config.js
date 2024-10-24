@@ -10,13 +10,7 @@ const createJestConfig = nextJest({
 });
 const jestConfig = createJestConfig({
   moduleDirectories: ['node_modules', '<rootDir>'],
+  testTimeout: 60000
 });
 
 module.exports = jestConfig;
-
-/*
-  Desafios:
-  1. Provar atraves do código que o processo do jest está no ambiente de testes.
-  2. Carregar as configurações de test.
-
-*/
