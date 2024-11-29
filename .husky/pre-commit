@@ -1,2 +1,1 @@
-npx secretlint "**/*" --maskSecrets
-npx prettier --ignore-unknown --write ${staged} .
+npx secretlint "**/*" --maskSecretsnpx lint-staged

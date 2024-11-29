@@ -19,7 +19,7 @@
     "lint:eslint:fix": "next lint --dir . --fix",
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
-    "prepare": "husky",
+    "prepare": "husky && husky install",
     "commit": "cz"
   },
   "author": "@matheeeusl",
@@ -47,6 +47,7 @@
     "eslint-plugin-jest": "^28.9.0",
     "husky": "^9.1.6",
     "jest": "^29.7.0",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "secretlint": "^9.0.0"
   },
@@ -54,5 +55,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
