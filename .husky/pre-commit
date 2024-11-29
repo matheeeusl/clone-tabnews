@@ -1,1 +1,1 @@
-npx secretlint "**/*" --maskSecrets
+npx secretlint "**/*" --maskSecretsnpx lint-staged
